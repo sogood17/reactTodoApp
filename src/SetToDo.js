@@ -1,4 +1,5 @@
 import { React, useState } from "react";
+import "./setTodo.css";
 
 export default function SetToDo() {
   const [toDo, setToDo] = useState("");
@@ -28,7 +29,10 @@ export default function SetToDo() {
       <div>
         <ul>
           {list.map((v, i) => (
-            <li key={i}>{v}</li>
+            <li key={i}>
+              <input type="checkbox"></input>
+              {v}
+            </li>
           ))}
         </ul>
       </div>
